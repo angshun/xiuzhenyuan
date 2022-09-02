@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<datasources>
+		<ds name="carrots_bangbang"
+			driverClassName="com.mysql.jdbc.Driver"
+			url="jdbc:mysql://120.92.4.210:3306/carrots_ys?defaultBatchValue=1000"
+			username="arthur"
+			password="arthur"
+			maxActive="50"
+			maxIdle="50"
+			maxWait="10"
+			check="true"
+		/>
+		<!--<ds name="carrots_bangbang"-->
+			<!--driverClassName="com.mysql.jdbc.Driver"-->
+			<!--url="jdbc:mysql://localhost:3306/carrots?defaultBatchValue=1000"-->
+			<!--username="root"-->
+			<!--password="ysmh2008"-->
+			<!--maxActive="50"-->
+			<!--maxIdle="50"-->
+			<!--maxWait="10"-->
+			<!--check="true"-->
+		<!--/>-->
+		<ds name="idCenterDS"
+			driverClassName="com.mysql.jdbc.Driver"
+			url="jdbc:mysql://120.92.4.210:3306/resources?defaultBatchValue=1000"
+			username="arthur"
+			password="arthur"
+			maxActive="10"
+			maxIdle="10"
+			maxWait="5"
+			check="true"
+		/>
+	</datasources>
+	<groups>
+		<group name="carrots_bangbang" master="carrots_bangbang"  />			
+	</groups>
+</root>
+
+

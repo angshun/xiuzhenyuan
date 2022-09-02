@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ptteng.login.dao.StudentDao">
+    <insert id="add" parameterType="com.ptteng.login.model.Student">
+        INSERT INTO student (stu_name,stu_school,sign,stu_introducer) VALUES (#{sign},#{stu_name},#{stu_school},#{stu_introducer})
+    </insert>
+    <update id="update" parameterType="com.ptteng.login.model.Student">
+        UPDATE student SET stu_name = #{stu_name},stu_school=#{stu_school},stu_introducer=#{stu_introducer},sign= #{sign} WHERE id= #{id}
+    </update>
+    <delete id="delete" parameterType="int">
+        DELETE  FROM student WHERE  id = #{id}
+    </delete>
+    <select id="findStuById" resultType="com.ptteng.login.model.Student" parameterType="int">
+        SELECT * FROM student WHERE id = #{id}
+    </select>
+    <select id="getAll" resultType="com.ptteng.login.model.Student">
+        SELECT * FROM student
+    </select>
+    <select id="findStuByName" resultType="com.ptteng.login.model.Student">
+        SELECT * FROM student WHERE stu_name = #{stu_name}
+    </select>
+</mapper>

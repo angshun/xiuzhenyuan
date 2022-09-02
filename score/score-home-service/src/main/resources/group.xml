@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<datasources>
+		<ds name="score"
+			driverClassName="com.mysql.jdbc.Driver"
+			url="jdbc:mysql://db.score:3306/score?defaultBatchValue=1000"
+			username="arthur"
+			password="arthur"
+			maxActive="50"
+			maxIdle="50"
+			maxWait="10"
+            check="true"
+		/>
+		 <ds name="idCenterDS"
+			driverClassName="com.mysql.jdbc.Driver"
+			url="jdbc:mysql://db.score:3306/resources?defaultBatchValue=1000"
+			username="arthur"
+			password="arthur"
+			maxActive="50"
+			maxIdle="10"
+			maxWait="10"
+            check="true"
+		 />
+	</datasources>
+	<groups>
+		<group name="score" master="score"  />
+	</groups>
+</root>
+
+

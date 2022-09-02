@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context-4.0.xsd
+         http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+
+    <!--连接数据库-->
+    <context:property-placeholder location="classpath:properties/*"/>
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+    <!--配置SqlSessionFactory对象，加载mapper映射文件-->
+    <bean id="SqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="mapperLocations" value="classpath:mapper/*Mapper.xml"/>
+    </bean>
+    <!--扫描dao接口-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.ptteng.login.dao"/>
+        <property name="sqlSessionFactoryBeanName" value="SqlSessionFactory"/>
+    </bean>
+
+    <!--定义跳转文件的前后缀-->
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          p:prefix="/WEB-INF/"
+          p:suffix=".jsp"
+          p:order="2"/>
+    <!--扫描所有注解，并自动创建bean-->
+    <context:component-scan base-package="com.ptteng"/>
+    <!--配置适配器与映射器-->
+    <mvc:annotation-driven/>
+    <!--处理web项目静态文件问题-->
+    <mvc:default-servlet-handler/>
+    <!--tiles框架配置 order表示优先级，值越小优先级越高-->
+    <bean id="tilesViewResolver" class="org.springframework.web.servlet.view.tiles3.TilesViewResolver" p:order="1" />
+    <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+        <property name="definitions">
+            <list>
+                <value>/tiles.xml</value>
+            </list>
+        </property>
+    </bean>
+
+    <!--6：配置拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/u/*"/>
+            <bean class="com.ptteng.login.interceptor.LoginInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+
+    <!--7.配置memcache-->
+    <bean id="memcachedPool" class="com.whalin.MemCached.SockIOPool"
+          factory-method="getInstance" init-method="initialize" destroy-method="shutDown">
+        <constructor-arg>
+            <value>memCachedPool</value>
+        </constructor-arg>
+
+        <property name="servers">
+            <list>
+                <value>${memcached.server}</value>
+            </list>
+        </property>
+
+        <property name="initConn">
+            <value>${memcached.initConn}</value>
+        </property>
+
+        <property name="minConn">
+            <value>${memcached.minConn}</value>
+        </property>
+
+        <property name="maxConn">
+            <value>${memcached.maxConn}</value>
+        </property>
+
+        <property name="maintSleep">
+            <value>${memcached.maintSleep}</value>
+        </property>
+
+        <property name="nagle">
+            <value>${memcached.nagle}</value>
+        </property>
+
+        <property name="socketTO">
+            <value>${memcached.socketTO}</value>
+        </property>
+    </bean>
+    <bean id="memCachedClient" class="com.whalin.MemCached.MemCachedClient">
+        <constructor-arg>
+            <value>memCachedPool</value>
+        </constructor-arg>
+    </bean>
+
+
+
+
+
+
+
+</beans>

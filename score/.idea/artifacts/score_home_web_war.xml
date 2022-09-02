@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="score-home-web:war">
+    <output-path>$PROJECT_DIR$/score-home-web/target</output-path>
+    <root id="archive" name="score-home-web.war">
+      <element id="artifact" artifact-name="score-home-web:war exploded" />
+    </root>
+  </artifact>
+</component>

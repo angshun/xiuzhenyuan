@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:sca="http://www.springframework.org/schema/sca"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+            http://www.springframework.org/schema/sca http://www.springframework.org/schema/sca/spring-sca.xsd">
+
+    <context:component-scan base-package="com.ptteng.score.home"/>
+
+
+    <sca:service name="articleService"
+                 type="com.ptteng.score.home.service.ArticleService" target="articleService"/>
+
+
+    <sca:service name="staffService"
+                 type="com.ptteng.score.home.service.StaffService" target="staffService"/>
+
+
+    <sca:service name="allTypeScoreService"
+                 type="com.ptteng.score.home.service.AllTypeScoreService" target="allTypeScoreService"/>
+
+
+    <sca:service name="departmentService"
+                 type="com.ptteng.score.home.service.DepartmentService" target="departmentService"/>
+
+
+    <sca:service name="taskService"
+                 type="com.ptteng.score.home.service.TaskService" target="taskService"/>
+
+
+    <sca:service name="scoreTypeService"
+                 type="com.ptteng.score.home.service.ScoreTypeService" target="scoreTypeService"/>
+
+
+    <sca:service name="philosophyService"
+                 type="com.ptteng.score.home.service.PhilosophyService" target="philosophyService"/>
+
+
+    <sca:service name="staffPhilosophyRelationService"
+                 type="com.ptteng.score.home.service.StaffPhilosophyRelationService"
+                 target="staffPhilosophyRelationService"/>
+
+
+    <sca:service name="noticeService"
+                 type="com.ptteng.score.home.service.NoticeService" target="noticeService"/>
+
+
+    <sca:service name="goodsService"
+                 type="com.ptteng.score.home.service.GoodsService" target="goodsService"/>
+
+
+    <sca:service name="starService"
+                 type="com.ptteng.score.home.service.StarService" target="starService"/>
+
+
+    <sca:service name="roleService"
+                 type="com.ptteng.score.home.service.RoleService" target="roleService"/>
+
+
+    <sca:service name="managerService"
+                 type="com.ptteng.score.home.service.ManagerService" target="managerService"/>
+
+    <sca:service name="moduleService"
+                 type="com.ptteng.score.home.service.ModuleService" target="moduleService"/>
+
+
+    <sca:service name="roleModuleService"
+                 type="com.ptteng.score.home.service.RoleModuleService" target="roleModuleService"/>
+
+
+    <sca:service name="dailyAttendanceService"
+                 type="com.ptteng.score.home.service.DailyAttendanceService" target="dailyAttendanceService"/>
+
+
+    <sca:service name="enterpriseApprovalService"
+                 type="com.ptteng.score.home.service.EnterpriseApprovalService" target="enterpriseApprovalService"/>
+
+
+    <sca:service name="enterpriseLogService"
+                 type="com.ptteng.score.home.service.EnterpriseLogService" target="enterpriseLogService"/>
+
+
+    <sca:service name="scoreExchangeApprovalService"
+                 type="com.ptteng.score.home.service.ScoreExchangeApprovalService"
+                 target="scoreExchangeApprovalService"/>
+
+
+    <sca:service name="scoreLogService"
+                 type="com.ptteng.score.home.service.ScoreLogService" target="scoreLogService"/>
+
+
+    <sca:service name="rewardLogService"
+                 type="com.ptteng.score.home.service.RewardLogService" target="rewardLogService"/>
+
+
+    <sca:service name="operationLogService"
+                 type="com.ptteng.score.home.service.OperationLogService" target="operationLogService"/>
+
+
+    <sca:service name="attendanceLogService"
+                 type="com.ptteng.score.home.service.AttendanceLogService" target="attendanceLogService"/>
+
+
+    <sca:service name="approveLogService"
+                 type="com.ptteng.score.home.service.ApproveLogService" target="approveLogService"/>
+
+
+    <sca:service name="staffTaskRelationService"
+                 type="com.ptteng.score.home.service.StaffTaskRelationService" target="staffTaskRelationService"/>
+
+
+    <sca:service name="copyRelationService"
+                 type="com.ptteng.score.home.service.CopyRelationService" target="copyRelationService"/>
+
+
+    <sca:service name="applyManageService"
+                 type="com.ptteng.score.home.service.ApplyManageService" target="applyManageService"/>
+
+
+    <bean id="articleService"
+          class="com.ptteng.score.home.service.impl.ArticleServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="staffService"
+          class="com.ptteng.score.home.service.impl.StaffServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="allTypeScoreService"
+          class="com.ptteng.score.home.service.impl.AllTypeScoreServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="departmentService"
+          class="com.ptteng.score.home.service.impl.DepartmentServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="taskService"
+          class="com.ptteng.score.home.service.impl.TaskServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="scoreTypeService"
+          class="com.ptteng.score.home.service.impl.ScoreTypeServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="philosophyService"
+          class="com.ptteng.score.home.service.impl.PhilosophyServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="staffPhilosophyRelationService"
+          class="com.ptteng.score.home.service.impl.StaffPhilosophyRelationServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="noticeService"
+          class="com.ptteng.score.home.service.impl.NoticeServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="goodsService"
+          class="com.ptteng.score.home.service.impl.GoodsServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="starService"
+          class="com.ptteng.score.home.service.impl.StarServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="roleService"
+          class="com.ptteng.score.home.service.impl.RoleServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="managerService"
+          class="com.ptteng.score.home.service.impl.ManagerServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="moduleService"
+          class="com.ptteng.score.home.service.impl.ModuleServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="roleModuleService"
+          class="com.ptteng.score.home.service.impl.RoleModuleServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="dailyAttendanceService"
+          class="com.ptteng.score.home.service.impl.DailyAttendanceServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="enterpriseApprovalService"
+          class="com.ptteng.score.home.service.impl.EnterpriseApprovalServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="enterpriseLogService"
+          class="com.ptteng.score.home.service.impl.EnterpriseLogServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="scoreExchangeApprovalService"
+          class="com.ptteng.score.home.service.impl.ScoreExchangeApprovalServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="scoreLogService"
+          class="com.ptteng.score.home.service.impl.ScoreLogServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="rewardLogService"
+          class="com.ptteng.score.home.service.impl.RewardLogServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="operationLogService"
+          class="com.ptteng.score.home.service.impl.OperationLogServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="attendanceLogService"
+          class="com.ptteng.score.home.service.impl.AttendanceLogServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="approveLogService"
+          class="com.ptteng.score.home.service.impl.ApproveLogServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="staffTaskRelationService"
+          class="com.ptteng.score.home.service.impl.StaffTaskRelationServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="copyRelationService"
+          class="com.ptteng.score.home.service.impl.CopyRelationServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+    <bean id="applyManageService"
+          class="com.ptteng.score.home.service.impl.ApplyManageServiceImpl" parent="baseDaoService">
+
+    </bean>
+
+
+    <bean id="dao" class="com.gemantic.dal.dao.impl.CompositeDaoImpl"/>
+
+    <bean id="baseDaoService"
+          class="com.ptteng.common.dao.BaseDaoServiceImpl">
+        <property name="dao" ref="dao"/>
+    </bean>
+
+
+    <!-- performance -->
+    <aop:aspectj-autoproxy/>
+    <bean id="aroundLoggingTime" class="com.gemantic.common.stat.aop.time.AroundTimeConsume"/>
+    <aop:config>
+        <aop:aspect ref="aroundLoggingTime">
+            <aop:pointcut id="publicServiceMethod"
+                          expression="execution(* com.gemantic..service.*.*(..)) "/>
+            <aop:around method="around" pointcut-ref="publicServiceMethod"/>
+        </aop:aspect>
+    </aop:config>
+
+</beans>
+

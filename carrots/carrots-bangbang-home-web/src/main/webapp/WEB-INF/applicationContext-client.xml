@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:sca="http://www.springframework.org/schema/sca"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+            http://www.springframework.org/schema/sca http://www.springframework.org/schema/sca/spring-sca.xsd">
+	
+	<context:annotation-config />
+    <context:component-scan base-package="com.gemantic"/>  
+	
+	
+	<bean id="scaClient"
+		class="com.gemantic.common.sca.service.SCAClientBean">
+		<property name="resource" value="client.composite" />
+	</bean>
+	
+	
+	<!-- ============================================================ -->
+	<!-- ==                    CarrotsBangbangComponent                       == -->
+	<!-- ============================================================ -->
+	
+	 
+	
+	
+	<!-- ArticleService  -->
+
+	
+	<bean id="articleService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="ArticleServiceComponent" />
+		<property name="className"
+			value="com.ptteng.carrots.bangbang.service.ArticleService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- ProductService  -->
+
+	
+	<bean id="productService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="ProductServiceComponent" />
+		<property name="className"
+			value="com.ptteng.carrots.bangbang.service.ProductService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- CompanyService  -->
+
+	
+	<bean id="companyService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="CompanyServiceComponent" />
+		<property name="className"
+			value="com.ptteng.carrots.bangbang.service.CompanyService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- ProfessionService  -->
+
+	
+	<bean id="professionService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="ProfessionServiceComponent" />
+		<property name="className"
+			value="com.ptteng.carrots.bangbang.service.ProfessionService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- CompanyTagService  -->
+
+	
+	<bean id="companyTagService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="CompanyTagServiceComponent" />
+		<property name="className"
+			value="com.ptteng.carrots.bangbang.service.CompanyTagService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- ProfessionTagService  -->
+
+	
+	<bean id="professionTagService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="ProfessionTagServiceComponent" />
+		<property name="className"
+			value="com.ptteng.carrots.bangbang.service.ProfessionTagService" />
+	</bean>
+
+	
+		
+	
+	
+	
+	<!-- performance -->
+	
+	 <aop:aspectj-autoproxy />
+        <bean id="aroundLoggingTime" class="com.gemantic.common.stat.aop.time.AroundTimeConsume"/>
+        <aop:config>
+            <aop:aspect ref="aroundLoggingTime">
+                <aop:pointcut id="publicServiceMethod" expression="execution(* com.gemantic..service.*.*(..)) &amp;&amp; (!execution(* com.gemantic.common.sca.service.*.*(..)))" />
+                <aop:around method="around" pointcut-ref="publicServiceMethod"/>
+            </aop:aspect>
+        </aop:config>
+</beans>
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+
+
+    <!--第一步:开启扫描,包含注册BeanPostProcessor-->
+
+    <bean class="com.google.gson.Gson"/>
+    <context:component-scan base-package="com.ptteng.score.home.util"/>
+    <!--计划任务注解驱动-->
+    <task:annotation-driven/>
+    <!--线程池大小、队列容量、存活时间、当等待队已满时的策略,分为丢弃、由任务执行器直接运行等方式-->
+    <task:executor id="logExecutor" pool-size="5-10"
+                   queue-capacity="20" keep-alive="2000" rejection-policy="CALLER_RUNS"/>
+
+    <bean id="cookieUtil" class="com.qding.common.util.http.cookie.CookieUtil">
+        <property name="home" value="www.zonzii.com"></property>
+        <property name="domain" value=".zonzii.com"></property>
+    </bean>
+
+
+    <!-- 图片上传 -->
+    <bean id="imgStorageUtil" class="com.ptteng.common.storage.util.ImgStorageUtilJSImpl"
+          init-method="initClientConfig">
+        <property name="akey" value="7f1+ognHaShQrKG5kpJK"></property>
+        <property name="skey" value="GA4+psqUcK9OzwJ4SUWeiy/w1MoToq/zBqOx9b4j"></property>
+        <property name="bucketName" value="carrots"></property>
+        <property name="domain" value=".ks3-cn-beijing.ksyun.com"></property>
+    </bean>
+
+
+    <bean id="managerServiceConfig" class="java.util.HashMap">
+        <constructor-arg>
+            <map>
+                <entry key="pwd" value="123456"></entry>
+            </map>
+        </constructor-arg>
+    </bean>
+
+</beans>

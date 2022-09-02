@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+	<cache>
+		<datasource
+			name="default"
+			timeout="300"
+			port="11211"
+			server="cache.score.admin"
+			maxActive="18" 
+			maxIdle="18" 
+			maxWait="-1" 
+		/>
+	</cache>
+	<!--<regions>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.Article" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.Staff" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.AllTypeScore" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.Department" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.Task" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.ScoreType" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.Philosophy" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.StaffPhilosophyRelation" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.Notice" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.Goods" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.Star" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.Role" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.Manager" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.Module" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.RoleModule" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.DailyAttendance" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.EnterpriseApproval" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.EnterpriseLog" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.ScoreExchangeApproval" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.ScoreLog" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.RewardLog" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.OperationLog" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.AttendanceLog" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.ApproveLog" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.StaffTaskRelation" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.CopyRelation" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.score.homeservice.ApplyManage" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+										<!---->
+
+
+	<!--</regions>-->
+</root>
+

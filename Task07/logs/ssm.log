@@ -1,0 +1,108 @@
+[INFO][main][2017-05-14 14:30:35][com.cloopen.rest.sdk.utils.LoggerUtil] - Sun May 14 14:30:35 CST 2017 sendTemplateSMS url = https://app.cloopen.com:8883/2013-12-26/Accounts/8aaf07085bf11ee1015bf6a509d00293/SMS/TemplateSMS?sig=C338AFF1A87C44A87F920AE7C5C0403A
+[INFO][main][2017-05-14 14:30:36][com.cloopen.rest.sdk.utils.LoggerUtil] - Sun May 14 14:30:36 CST 2017 sendTemplateSMS Request body =  {"appId":"8aaf07085bf11ee1015bf6a50bab029a","to":"13007299384,15342606515","templateId":"1","datas":["8888","00000"]}
+[INFO][main][2017-05-14 14:30:37][com.cloopen.rest.sdk.utils.LoggerUtil] - Sun May 14 14:30:37 CST 2017 sendTemplateSMS response body = {"statusCode":"113302","statusMsg":"【短信】您正在使用云通讯测试模板且短信接收者不是注册的测试号码"}
+[INFO][main][2017-05-14 14:32:53][com.cloopen.rest.sdk.utils.LoggerUtil] - Sun May 14 14:32:53 CST 2017 sendTemplateSMS url = https://app.cloopen.com:8883/2013-12-26/Accounts/8aaf07085bf11ee1015bf6a509d00293/SMS/TemplateSMS?sig=27002B8582B0B93EC397FFCE3EF90DE5
+[INFO][main][2017-05-14 14:32:53][com.cloopen.rest.sdk.utils.LoggerUtil] - Sun May 14 14:32:53 CST 2017 sendTemplateSMS Request body =  {"appId":"8aaf07085bf11ee1015bf6a50bab029a","to":"13007299384","templateId":"1","datas":["8888","00000"]}
+[INFO][main][2017-05-14 14:32:54][com.cloopen.rest.sdk.utils.LoggerUtil] - Sun May 14 14:32:54 CST 2017 sendTemplateSMS response body = {"statusCode":"000000","templateSMS":{"smsMessageSid":"ac28d8d33caa4c2ab924c3fad74609ec","dateCreated":"20170514143237"}}
+[INFO][main][2017-05-14 14:53:17][com.cloopen.rest.sdk.utils.LoggerUtil] - Sun May 14 14:53:17 CST 2017 sendTemplateSMS url = https://app.cloopen.com:8883/2013-12-26/Accounts/8aaf07085bf11ee1015bf6a509d00293/SMS/TemplateSMS?sig=356E7DA61335CC081443F64CA3ABD3D5
+[INFO][main][2017-05-14 14:53:17][com.cloopen.rest.sdk.utils.LoggerUtil] - Sun May 14 14:53:17 CST 2017 sendTemplateSMS Request body =  {"appId":"8aaf07085bf11ee1015bf6a50bab029a","to":"13007299384,15342606515","templateId":"1","datas":["8888","00000"]}
+[INFO][main][2017-05-14 14:53:18][com.cloopen.rest.sdk.utils.LoggerUtil] - Sun May 14 14:53:18 CST 2017 sendTemplateSMS response body = {"statusCode":"113302","statusMsg":"【短信】您正在使用云通讯测试模板且短信接收者不是注册的测试号码"}
+[INFO][main][2017-05-14 15:25:31][com.cloopen.rest.sdk.utils.LoggerUtil] - Sun May 14 15:25:31 CST 2017 sendTemplateSMS url = https://app.cloopen.com:8883/2013-12-26/Accounts/8aaf07085bf11ee1015bf6a509d00293/SMS/TemplateSMS?sig=232FEBF3F19F24EE75E0811412A0FEE0
+[INFO][main][2017-05-14 15:25:31][com.cloopen.rest.sdk.utils.LoggerUtil] - Sun May 14 15:25:31 CST 2017 sendTemplateSMS Request body =  {"appId":"8aaf07085bf11ee1015bf6a50bab029a","to":"13007299384,15342606515","templateId":"1","datas":["8888"," 百万"]}
+[INFO][main][2017-05-14 15:25:32][com.cloopen.rest.sdk.utils.LoggerUtil] - Sun May 14 15:25:32 CST 2017 sendTemplateSMS response body = {"statusCode":"113302","statusMsg":"【短信】您正在使用云通讯测试模板且短信接收者不是注册的测试号码"}
+[WARN][main][2017-05-15 19:11:25][com.ksyun.ks3.http.Ks3CoreController] - com.ksyun.ks3.exception.client.ClientFileNotFoundException: java.io.FileNotFoundException: imagpath (系统找不到指定的文件。)
+[WARN][main][2017-05-15 19:12:22][com.ksyun.ks3.http.Ks3CoreController] - com.ksyun.ks3.exception.client.ClientFileNotFoundException: java.io.FileNotFoundException: imagpath (系统找不到指定的文件。)
+[WARN][main][2017-05-15 19:13:41][com.ksyun.ks3.http.Ks3CoreController] - com.ksyun.ks3.exception.client.ClientFileNotFoundException: java.io.FileNotFoundException: <imagpath> (文件名、目录名或卷标语法不正确。)
+[WARN][main][2017-05-15 19:14:11][com.ksyun.ks3.http.Ks3CoreController] - com.ksyun.ks3.exception.client.ClientFileNotFoundException: java.io.FileNotFoundException: <imagpath> (文件名、目录名或卷标语法不正确。)
+[WARN][main][2017-05-15 19:14:35][com.ksyun.ks3.http.Ks3CoreController] - com.ksyun.ks3.exception.client.ClientFileNotFoundException: java.io.FileNotFoundException: imagpath (系统找不到指定的文件。)
+[INFO][main][2017-05-15 19:15:05][com.ksyun.ks3.http.Ks3CoreController] - PUT http://kssws.ks-cdn.com/kinspace-wuzhiyong/testImage HTTP/1.1
+[INFO][main][2017-05-15 19:15:05][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Authorization:KSS AKLTPTwaS02dQrm62JvWC4A5wA:94It+Fu65OSo5ozo/UI6R1UUb+Q=
+[INFO][main][2017-05-15 19:15:05][com.ksyun.ks3.http.Ks3CoreController] - Request Header->User-Agent:ks3-kss-java-sdk/ks3client/v0.6.0
+[INFO][main][2017-05-15 19:15:05][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Date:Mon, 15 May 2017 11:15:04 GMT
+[INFO][main][2017-05-15 19:15:05][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Content-Type:image/jpeg
+[INFO][main][2017-05-15 19:15:05][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Content-MD5:nTd7EM53jEk4s8fixjoimg==
+[INFO][main][2017-05-15 19:15:07][org.apache.http.impl.execchain.RetryExec] - I/O exception (java.net.SocketException) caught when processing request to {}->http://kssws.ks-cdn.com:80: Connection reset by peer: socket write error
+[INFO][main][2017-05-15 19:15:07][org.apache.http.impl.execchain.RetryExec] - Retrying request to {}->http://kssws.ks-cdn.com:80
+[INFO][main][2017-05-15 19:15:07][org.apache.http.impl.execchain.RetryExec] - I/O exception (java.net.SocketException) caught when processing request to {}->http://kssws.ks-cdn.com:80: Connection reset by peer: socket write error
+[INFO][main][2017-05-15 19:15:07][org.apache.http.impl.execchain.RetryExec] - Retrying request to {}->http://kssws.ks-cdn.com:80
+[WARN][main][2017-05-15 19:15:10][com.ksyun.ks3.http.Ks3CoreController] - com.ksyun.ks3.exception.client.CallRemoteFailException: java.net.SocketException: Connection reset by peer: socket write error
+[INFO][main][2017-05-15 19:22:12][com.ksyun.ks3.http.Ks3CoreController] - PUT http://kssws.ks-cdn.com/kinspace-wuzhiyong/testImage HTTP/1.1
+[INFO][main][2017-05-15 19:22:12][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Authorization:KSS AKLTPTwaS02dQrm62JvWC4A5wA:C+/PdcY0MZO6cEmJSfXp2HpapTQ=
+[INFO][main][2017-05-15 19:22:12][com.ksyun.ks3.http.Ks3CoreController] - Request Header->x-kss-acl:public-read
+[INFO][main][2017-05-15 19:22:12][com.ksyun.ks3.http.Ks3CoreController] - Request Header->User-Agent:ks3-kss-java-sdk/ks3client/v0.6.0
+[INFO][main][2017-05-15 19:22:12][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Date:Mon, 15 May 2017 11:22:11 GMT
+[INFO][main][2017-05-15 19:22:12][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Content-Type:image/jpeg
+[INFO][main][2017-05-15 19:22:12][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Content-MD5:nTd7EM53jEk4s8fixjoimg==
+[INFO][main][2017-05-15 19:22:19][org.apache.http.impl.execchain.RetryExec] - I/O exception (java.net.SocketException) caught when processing request to {}->http://kssws.ks-cdn.com:80: Connection reset by peer: socket write error
+[INFO][main][2017-05-15 19:22:19][org.apache.http.impl.execchain.RetryExec] - Retrying request to {}->http://kssws.ks-cdn.com:80
+[INFO][main][2017-05-15 19:22:25][org.apache.http.impl.execchain.RetryExec] - I/O exception (java.net.SocketException) caught when processing request to {}->http://kssws.ks-cdn.com:80: Connection reset by peer: socket write error
+[INFO][main][2017-05-15 19:22:25][org.apache.http.impl.execchain.RetryExec] - Retrying request to {}->http://kssws.ks-cdn.com:80
+[WARN][main][2017-05-15 19:22:40][com.ksyun.ks3.http.Ks3CoreController] - com.ksyun.ks3.exception.client.CallRemoteFailException: java.net.SocketException: Connection reset by peer: socket write error
+[INFO][main][2017-05-15 19:33:00][com.ksyun.ks3.http.Ks3CoreController] - PUT http://kssws.ks-cdn.com/kinspace-wuzhiyong/testImage HTTP/1.1
+[INFO][main][2017-05-15 19:33:00][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Authorization:KSS AKLTPTwaS02dQrm62JvWC4A5wA:ri/WCjQraZwG94CcTcPoi0+qAHg=
+[INFO][main][2017-05-15 19:33:00][com.ksyun.ks3.http.Ks3CoreController] - Request Header->x-kss-acl:public-read
+[INFO][main][2017-05-15 19:33:00][com.ksyun.ks3.http.Ks3CoreController] - Request Header->User-Agent:ks3-kss-java-sdk/ks3client/v0.6.0
+[INFO][main][2017-05-15 19:33:00][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Date:Mon, 15 May 2017 11:33:00 GMT
+[INFO][main][2017-05-15 19:33:00][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Content-Type:image/jpeg
+[INFO][main][2017-05-15 19:33:00][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Content-MD5:nTd7EM53jEk4s8fixjoimg==
+[INFO][main][2017-05-15 19:33:00][org.apache.http.impl.execchain.RetryExec] - I/O exception (java.net.SocketException) caught when processing request to {}->http://kssws.ks-cdn.com:80: Connection reset by peer: socket write error
+[INFO][main][2017-05-15 19:33:00][org.apache.http.impl.execchain.RetryExec] - Retrying request to {}->http://kssws.ks-cdn.com:80
+[INFO][main][2017-05-15 19:33:00][org.apache.http.impl.execchain.RetryExec] - I/O exception (java.net.SocketException) caught when processing request to {}->http://kssws.ks-cdn.com:80: Connection reset by peer: socket write error
+[INFO][main][2017-05-15 19:33:00][org.apache.http.impl.execchain.RetryExec] - Retrying request to {}->http://kssws.ks-cdn.com:80
+[WARN][main][2017-05-15 19:33:00][com.ksyun.ks3.http.Ks3CoreController] - com.ksyun.ks3.exception.client.CallRemoteFailException: java.net.SocketException: Connection reset by peer: socket write error
+[INFO][main][2017-05-15 20:38:18][com.ksyun.ks3.http.Ks3CoreController] - GET http://kssws.ks-cdn.com HTTP/1.1
+[INFO][main][2017-05-15 20:38:18][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Authorization:KSS AKLTPTwaS02dQrm62JvWC4A5wA:o9YyaTquUjCXLDVJLL1/fUh/IRk=
+[INFO][main][2017-05-15 20:38:18][com.ksyun.ks3.http.Ks3CoreController] - Request Header->User-Agent:ks3-kss-java-sdk/ks3client/v0.6.0
+[INFO][main][2017-05-15 20:38:18][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Date:Mon, 15 May 2017 12:38:17 GMT
+[INFO][main][2017-05-15 20:38:18][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Content-Type:application/xml
+[INFO][main][2017-05-15 20:38:18][org.apache.http.impl.execchain.RetryExec] - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {}->http://kssws.ks-cdn.com:80: The target server failed to respond
+[INFO][main][2017-05-15 20:38:18][org.apache.http.impl.execchain.RetryExec] - Retrying request to {}->http://kssws.ks-cdn.com:80
+[INFO][main][2017-05-15 20:38:18][org.apache.http.impl.execchain.RetryExec] - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {}->http://kssws.ks-cdn.com:80: The target server failed to respond
+[INFO][main][2017-05-15 20:38:18][org.apache.http.impl.execchain.RetryExec] - Retrying request to {}->http://kssws.ks-cdn.com:80
+[WARN][main][2017-05-15 20:38:18][com.ksyun.ks3.http.Ks3CoreController] - com.ksyun.ks3.exception.client.CallRemoteFailException: org.apache.http.NoHttpResponseException: kssws.ks-cdn.com:80 failed to respond
+[INFO][main][2017-05-15 20:41:10][com.ksyun.ks3.http.Ks3CoreController] - GET http://kssws.ks-cdn.com HTTP/1.1
+[INFO][main][2017-05-15 20:41:10][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Authorization:KSS AKLTPTwaS02dQrm62JvWC4A5wA:31VPY9ZlFMZXE4KUl4eX2Ji6aZ8=
+[INFO][main][2017-05-15 20:41:10][com.ksyun.ks3.http.Ks3CoreController] - Request Header->User-Agent:ks3-kss-java-sdk/ks3client/v0.6.0
+[INFO][main][2017-05-15 20:41:10][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Date:Mon, 15 May 2017 12:41:10 GMT
+[INFO][main][2017-05-15 20:41:10][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Content-Type:application/xml
+[INFO][main][2017-05-15 20:41:11][org.apache.http.impl.execchain.RetryExec] - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {}->http://kssws.ks-cdn.com:80: The target server failed to respond
+[INFO][main][2017-05-15 20:41:11][org.apache.http.impl.execchain.RetryExec] - Retrying request to {}->http://kssws.ks-cdn.com:80
+[INFO][main][2017-05-15 20:41:11][org.apache.http.impl.execchain.RetryExec] - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {}->http://kssws.ks-cdn.com:80: The target server failed to respond
+[INFO][main][2017-05-15 20:41:11][org.apache.http.impl.execchain.RetryExec] - Retrying request to {}->http://kssws.ks-cdn.com:80
+[WARN][main][2017-05-15 20:41:11][com.ksyun.ks3.http.Ks3CoreController] - com.ksyun.ks3.exception.client.CallRemoteFailException: org.apache.http.NoHttpResponseException: kssws.ks-cdn.com:80 failed to respond
+[INFO][main][2017-05-15 20:43:18][com.ksyun.ks3.http.Ks3CoreController] - PUT http://kssws.ks-cdn.com/kinspace-wuzhiyong/testImage HTTP/1.1
+[INFO][main][2017-05-15 20:43:18][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Authorization:KSS AKLTPTwaS02dQrm62JvWC4A5wA:Yo905f2VslloPc8cCX8ZIDLo64Q=
+[INFO][main][2017-05-15 20:43:18][com.ksyun.ks3.http.Ks3CoreController] - Request Header->x-kss-acl:public-read
+[INFO][main][2017-05-15 20:43:18][com.ksyun.ks3.http.Ks3CoreController] - Request Header->User-Agent:ks3-kss-java-sdk/ks3client/v0.6.0
+[INFO][main][2017-05-15 20:43:18][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Date:Mon, 15 May 2017 12:43:18 GMT
+[INFO][main][2017-05-15 20:43:18][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Content-Type:image/jpeg
+[INFO][main][2017-05-15 20:43:18][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Content-MD5:nTd7EM53jEk4s8fixjoimg==
+[INFO][main][2017-05-15 20:43:19][org.apache.http.impl.execchain.RetryExec] - I/O exception (java.net.SocketException) caught when processing request to {}->http://kssws.ks-cdn.com:80: Connection reset by peer: socket write error
+[INFO][main][2017-05-15 20:43:19][org.apache.http.impl.execchain.RetryExec] - Retrying request to {}->http://kssws.ks-cdn.com:80
+[INFO][main][2017-05-15 20:43:19][org.apache.http.impl.execchain.RetryExec] - I/O exception (java.net.SocketException) caught when processing request to {}->http://kssws.ks-cdn.com:80: Connection reset by peer: socket write error
+[INFO][main][2017-05-15 20:43:19][org.apache.http.impl.execchain.RetryExec] - Retrying request to {}->http://kssws.ks-cdn.com:80
+[WARN][main][2017-05-15 20:43:19][com.ksyun.ks3.http.Ks3CoreController] - com.ksyun.ks3.exception.client.CallRemoteFailException: java.net.SocketException: Connection reset by peer: socket write error
+[INFO][main][2017-05-15 20:45:55][com.ksyun.ks3.http.Ks3CoreController] - PUT http://kssws.ks-cdn.com/kinspace-wuzhiyong/testImage HTTP/1.1
+[INFO][main][2017-05-15 20:45:55][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Authorization:KSS AKLTPTwaS02dQrm62JvWC4A5wA:Hnj5apQQKBFmTR7hun59oiyZA/E=
+[INFO][main][2017-05-15 20:45:55][com.ksyun.ks3.http.Ks3CoreController] - Request Header->x-kss-acl:public-read
+[INFO][main][2017-05-15 20:45:55][com.ksyun.ks3.http.Ks3CoreController] - Request Header->User-Agent:ks3-kss-java-sdk/ks3client/v0.6.0
+[INFO][main][2017-05-15 20:45:55][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Date:Mon, 15 May 2017 12:45:55 GMT
+[INFO][main][2017-05-15 20:45:55][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Content-Type:image/jpeg
+[INFO][main][2017-05-15 20:45:55][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Content-MD5:nTd7EM53jEk4s8fixjoimg==
+[INFO][main][2017-05-15 20:45:55][org.apache.http.impl.execchain.RetryExec] - I/O exception (java.net.SocketException) caught when processing request to {}->http://kssws.ks-cdn.com:80: Connection reset by peer: socket write error
+[INFO][main][2017-05-15 20:45:55][org.apache.http.impl.execchain.RetryExec] - Retrying request to {}->http://kssws.ks-cdn.com:80
+[INFO][main][2017-05-15 20:45:58][org.apache.http.impl.execchain.RetryExec] - I/O exception (java.net.SocketException) caught when processing request to {}->http://kssws.ks-cdn.com:80: Connection reset by peer: socket write error
+[INFO][main][2017-05-15 20:45:58][org.apache.http.impl.execchain.RetryExec] - Retrying request to {}->http://kssws.ks-cdn.com:80
+[WARN][main][2017-05-15 20:45:58][com.ksyun.ks3.http.Ks3CoreController] - com.ksyun.ks3.exception.client.CallRemoteFailException: java.net.SocketException: Connection reset by peer: socket write error
+[INFO][main][2017-05-15 21:01:03][com.ksyun.ks3.http.Ks3CoreController] - PUT http://kssws.ks-cdn.com/kinspace-wuzhiyong/testImage HTTP/1.1
+[INFO][main][2017-05-15 21:01:03][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Authorization:KSS AKLTPTwaS02dQrm62JvWC4A5wA:G41CJLENem1U5WA9tfgjlp2CsMU=
+[INFO][main][2017-05-15 21:01:03][com.ksyun.ks3.http.Ks3CoreController] - Request Header->x-kss-acl:public-read
+[INFO][main][2017-05-15 21:01:03][com.ksyun.ks3.http.Ks3CoreController] - Request Header->User-Agent:ks3-kss-java-sdk/ks3client/v0.6.0
+[INFO][main][2017-05-15 21:01:03][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Date:Mon, 15 May 2017 13:01:02 GMT
+[INFO][main][2017-05-15 21:01:03][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Content-Type:image/jpeg
+[INFO][main][2017-05-15 21:01:03][com.ksyun.ks3.http.Ks3CoreController] - Request Header->Content-MD5:nTd7EM53jEk4s8fixjoimg==
+[INFO][main][2017-05-15 21:01:04][org.apache.http.impl.execchain.RetryExec] - I/O exception (java.net.SocketException) caught when processing request to {}->http://kssws.ks-cdn.com:80: Connection reset by peer: socket write error
+[INFO][main][2017-05-15 21:01:04][org.apache.http.impl.execchain.RetryExec] - Retrying request to {}->http://kssws.ks-cdn.com:80
+[INFO][main][2017-05-15 21:01:04][org.apache.http.impl.execchain.RetryExec] - I/O exception (java.net.SocketException) caught when processing request to {}->http://kssws.ks-cdn.com:80: Connection reset by peer: socket write error
+[INFO][main][2017-05-15 21:01:04][org.apache.http.impl.execchain.RetryExec] - Retrying request to {}->http://kssws.ks-cdn.com:80
+[WARN][main][2017-05-15 21:01:04][com.ksyun.ks3.http.Ks3CoreController] - com.ksyun.ks3.exception.client.CallRemoteFailException: java.net.SocketException: Connection reset by peer: socket write error

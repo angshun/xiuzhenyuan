@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <!--指定模版，头部，底部jsp路径-->
+    <definition name="layout" template="/WEB-INF/layout/template.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/layout/header.jsp"/>
+        <put-attribute name="body" value=""/>
+        <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp"/>
+    </definition>
+
+
+
+    <definition name="home" extends="layout">
+        <put-attribute name="title" value="首页"/>
+        <put-attribute name="body" value="/WEB-INF/views/home.jsp"/>
+    </definition>
+
+    <definition name="occupation" extends="layout">
+        <put-attribute name="title" value="职业"/>
+        <put-attribute name="body" value="/WEB-INF/views/occupation.jsp"/>
+    </definition>
+
+</tiles-definitions>

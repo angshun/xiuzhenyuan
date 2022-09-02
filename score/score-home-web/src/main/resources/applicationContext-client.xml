@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:sca="http://www.springframework.org/schema/sca"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+            http://www.springframework.org/schema/sca http://www.springframework.org/schema/sca/spring-sca.xsd">
+	
+	<context:annotation-config />
+    <context:component-scan base-package="com.gemantic"/>  
+	
+	
+	<bean id="scaClient"
+		class="com.gemantic.common.sca.service.SCAClientBean">
+		<property name="resource" value="client.composite" />
+	</bean>
+	
+	
+	<!-- ============================================================ -->
+	<!-- ==                    ScoreAdminComponent                       == -->
+	<!-- ============================================================ -->
+	
+	 
+	
+	
+	<!-- ArticleService  -->
+
+	
+	<bean id="articleService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="ArticleServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.ArticleService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- StaffService  -->
+
+	
+	<bean id="staffService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="StaffServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.StaffService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- AllTypeScoreService  -->
+
+	
+	<bean id="allTypeScoreService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="AllTypeScoreServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.AllTypeScoreService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- DepartmentService  -->
+
+	
+	<bean id="departmentService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="DepartmentServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.DepartmentService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- TaskService  -->
+
+	
+	<bean id="taskService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="TaskServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.TaskService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- ScoreTypeService  -->
+
+	
+	<bean id="scoreTypeService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="ScoreTypeServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.ScoreTypeService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- PhilosophyService  -->
+
+	
+	<bean id="philosophyService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="PhilosophyServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.PhilosophyService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- StaffPhilosophyRelationService  -->
+
+	
+	<bean id="staffPhilosophyRelationService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="StaffPhilosophyRelationServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.StaffPhilosophyRelationService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- NoticeService  -->
+
+	
+	<bean id="noticeService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="NoticeServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.NoticeService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- GoodsService  -->
+
+	
+	<bean id="goodsService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="GoodsServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.GoodsService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- StarService  -->
+
+	
+	<bean id="starService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="StarServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.StarService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- RoleService  -->
+
+	
+	<bean id="roleService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="RoleServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.RoleService" />
+	</bean>
+
+
+
+	<!-- ManagerService  -->
+
+
+	<bean id="managerService"
+		  class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="ManagerServiceComponent" />
+		<property name="className"
+				  value="com.ptteng.score.home.service.ManagerService" />
+	</bean>
+
+	
+	
+	
+	<!-- ModuleService  -->
+
+	
+	<bean id="moduleService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="ModuleServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.ModuleService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- RoleModuleService  -->
+
+	
+	<bean id="roleModuleService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="RoleModuleServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.RoleModuleService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- DailyAttendanceService  -->
+
+	
+	<bean id="dailyAttendanceService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="DailyAttendanceServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.DailyAttendanceService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- EnterpriseApprovalService  -->
+
+	
+	<bean id="enterpriseApprovalService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="EnterpriseApprovalServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.EnterpriseApprovalService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- EnterpriseLogService  -->
+
+	
+	<bean id="enterpriseLogService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="EnterpriseLogServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.EnterpriseLogService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- ScoreExchangeApprovalService  -->
+
+	
+	<bean id="scoreExchangeApprovalService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="ScoreExchangeApprovalServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.ScoreExchangeApprovalService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- ScoreLogService  -->
+
+	
+	<bean id="scoreLogService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="ScoreLogServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.ScoreLogService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- RewardLogService  -->
+
+	
+	<bean id="rewardLogService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="RewardLogServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.RewardLogService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- OperationLogService  -->
+
+	
+	<bean id="operationLogService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="OperationLogServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.OperationLogService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- AttendanceLogService  -->
+
+	
+	<bean id="attendanceLogService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="AttendanceLogServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.AttendanceLogService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- ApproveLogService  -->
+
+	
+	<bean id="approveLogService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="ApproveLogServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.ApproveLogService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- StaffTaskRelationService  -->
+
+	
+	<bean id="staffTaskRelationService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="StaffTaskRelationServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.StaffTaskRelationService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- CopyRelationService  -->
+
+	
+	<bean id="copyRelationService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="CopyRelationServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.CopyRelationService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- ApplyManageService  -->
+
+	
+	<bean id="applyManageService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="ApplyManageServiceComponent" />
+		<property name="className"
+			value="com.ptteng.score.home.service.ApplyManageService" />
+	</bean>
+
+	
+		
+	
+	
+	
+	<!-- performance -->
+	
+	 <aop:aspectj-autoproxy />
+        <bean id="aroundLoggingTime" class="com.gemantic.common.stat.aop.time.AroundTimeConsume"/>
+        <aop:config>
+            <aop:aspect ref="aroundLoggingTime">
+                <aop:pointcut id="publicServiceMethod" expression="execution(* com.gemantic..service.*.*(..)) &amp;&amp; (!execution(* com.gemantic.common.sca.service.*.*(..)))" />
+                <aop:around method="around" pointcut-ref="publicServiceMethod"/>
+            </aop:aspect>
+        </aop:config>
+</beans>
+

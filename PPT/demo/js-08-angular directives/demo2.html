@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://cdn.bootcss.com/angular.js/1.4.0/angular.js"></script>
+
+</head>
+<body ng-app="myApp" ng-controller='demoCtrl'  >
+	<span>{{a}}</span>
+	<button ng-click="click()">fuck me</button>
+   <div ng-if=a>我是内容</div>
+   <div ng-show=a>我是内容</div>
+</body>
+
+<script>
+
+
+angular.module("myApp", [])
+    .controller('demoCtrl',function ($scope) {
+    	$scope.a = false,
+    	console.log($scope.a),
+    	$scope.click = function () {
+    		$scope.a = !$scope.a,
+    		console.log($scope.a)
+    	}
+    })
+    
+
+</script>
+</html>

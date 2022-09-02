@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ptteng.mapper.StudentMapper"><!--使用mapper代理需要这里要接口的全路径-->
+    <!--keyProperty把主键赋值给设置的领域模型属性中-->
+    <!--useGeneratedKeys获取主键的方法，要求有主键有自增长功能，默认是false-->
+
+    <insert id="addStudent" useGeneratedKeys="true" keyProperty="id" parameterType="com.ptteng.model.Student">
+        INSERT INTO student (stu_name,create_at,update_at,sign,stu_school,stu_introducer)
+        VALUES (#{stu_name},#{create_at},#{update_at},#{sign},#{stu_school},#{stu_introducer})
+    </insert>
+
+    <delete id="deleteStudentById" parameterType="int" >
+        DELETE FROM student WHERE id = #{id}
+    </delete>
+<!--SELECT * FROM ENTITY_RELATION WHERE SRC_ID=#{srcId}-->
+    <!-- parameterType输入参数的数据类型-->
+    <update id="updateStudent" parameterType="com.ptteng.model.Student">
+    UPDATE student SET  stu_name = #{stu_name},create_at = #{create_at},
+        update_at = #{update_at},sign = #{sign},stu_school = #{stu_school},
+        stu_introducer = #{stu_introducer} WHERE id = #{id}
+    </update>
+
+    <select id="findStudentById" parameterType="int" resultType="com.ptteng.model.Student">
+        SELECT * FROM student WHERE id =#{id}
+
+    </select>
+
+    <select id="findAllGoodStudent" resultType="com.ptteng.model.Student">
+        SELECT * FROM student WHERE good_status = 1
+    </select>
+    <!--resultMap:适合使用返回值是自定义实体类的情况  -->
+    <!--resultType适合使用返回值的数据类型是非自定义的，即jdk的提供的类型 -->
+    <select id="getAllStudent" resultType="com.ptteng.model.Student">
+        SELECT * FROM student
+    </select>
+</mapper>

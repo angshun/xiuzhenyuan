@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dal>
+	<list>
+		
+				
+		
+		<config>
+			<path>article_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>staff_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>allTypeScore_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>department_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>task_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>scoreType_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>philosophy_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>staffPhilosophyRelation_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>notice_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>goods_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>star_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>role_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>manager_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>module_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>roleModule_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>dailyAttendance_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>enterpriseApproval_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>enterpriseLog_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>scoreExchangeApproval_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>scoreLog_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>rewardLog_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>operationLog_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>attendanceLog_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>approveLog_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>staffTaskRelation_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>copyRelation_dao.xml</path>
+		</config>
+				
+		
+		<config>
+			<path>applyManage_dao.xml</path>
+		</config>
+						
+		
+		
+	</list>
+
+	<default>
+		<dbStrategy name=""
+			clasz="com.gemantic.dal.route.strategy.DefaultStrategy">
+			<pattern value="[0-9]$" group="g1" />
+		</dbStrategy>
+		<listenerClass className="" />
+		<idCenterDS ds="idCenterDS" />
+	</default>
+</dal>                

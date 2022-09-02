@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.tuscany.sca:tuscany-implementation-spring:sohu06:1.4-sohu06">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tuscany/sca/tuscany-implementation-spring/1.4-sohu06/tuscany-implementation-spring-1.4-sohu06-sohu06.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tuscany/sca/tuscany-implementation-spring/1.4-sohu06/tuscany-implementation-spring-1.4-sohu06-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tuscany/sca/tuscany-implementation-spring/1.4-sohu06/tuscany-implementation-spring-1.4-sohu06-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

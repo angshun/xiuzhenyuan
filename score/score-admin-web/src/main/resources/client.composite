@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite xmlns="http://www.osoa.org/xmlns/sca/1.0" xmlns:tuscany="http://tuscany.apache.org/xmlns/sca/1.0"
+           xmlns:scallop="http://scallop/xmlns/sca/1.0"
+           targetNamespace="http://sns.sohu.com/home/composite" xmlns:sample="http://sns.sohu.com/home/composite"
+           name="HomeComposite">
+
+
+    <!-- ScoreAdminComponent -->
+
+    <component name="ArticleServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.ArticleSCAClient"/>
+
+        <reference name="articleService">
+            <scallop:binding.rmi registryName="article-score-admin-service-rmi" serviceName="ArticleRMIService"/>
+        </reference>
+    </component>
+    <component name="StaffServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.StaffSCAClient"/>
+
+        <reference name="staffService">
+            <scallop:binding.rmi registryName="staff-score-admin-service-rmi" serviceName="StaffRMIService"/>
+        </reference>
+    </component>
+    <component name="AllTypeScoreServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.AllTypeScoreSCAClient"/>
+
+        <reference name="allTypeScoreService">
+            <scallop:binding.rmi registryName="allTypeScore-score-admin-service-rmi"
+                                 serviceName="AllTypeScoreRMIService"/>
+        </reference>
+    </component>
+    <component name="DepartmentServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.DepartmentSCAClient"/>
+
+        <reference name="departmentService">
+            <scallop:binding.rmi registryName="department-score-admin-service-rmi" serviceName="DepartmentRMIService"/>
+        </reference>
+    </component>
+    <component name="TaskServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.TaskSCAClient"/>
+
+        <reference name="taskService">
+            <scallop:binding.rmi registryName="task-score-admin-service-rmi" serviceName="TaskRMIService"/>
+        </reference>
+    </component>
+    <component name="ScoreTypeServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.ScoreTypeSCAClient"/>
+
+        <reference name="scoreTypeService">
+            <scallop:binding.rmi registryName="scoreType-score-admin-service-rmi" serviceName="ScoreTypeRMIService"/>
+        </reference>
+    </component>
+    <component name="PhilosophyServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.PhilosophySCAClient"/>
+
+        <reference name="philosophyService">
+            <scallop:binding.rmi registryName="philosophy-score-admin-service-rmi" serviceName="PhilosophyRMIService"/>
+        </reference>
+    </component>
+    <component name="StaffPhilosophyRelationServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.StaffPhilosophyRelationSCAClient"/>
+
+        <reference name="staffPhilosophyRelationService">
+            <scallop:binding.rmi registryName="staffPhilosophyRelation-score-admin-service-rmi"
+                                 serviceName="StaffPhilosophyRelationRMIService"/>
+        </reference>
+    </component>
+    <component name="NoticeServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.NoticeSCAClient"/>
+
+        <reference name="noticeService">
+            <scallop:binding.rmi registryName="notice-score-admin-service-rmi" serviceName="NoticeRMIService"/>
+        </reference>
+    </component>
+    <component name="GoodsServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.GoodsSCAClient"/>
+
+        <reference name="goodsService">
+            <scallop:binding.rmi registryName="goods-score-admin-service-rmi" serviceName="GoodsRMIService"/>
+        </reference>
+    </component>
+    <component name="StarServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.StarSCAClient"/>
+
+        <reference name="starService">
+            <scallop:binding.rmi registryName="star-score-admin-service-rmi" serviceName="StarRMIService"/>
+        </reference>
+    </component>
+    <component name="RoleServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.RoleSCAClient"/>
+
+        <reference name="roleService">
+            <scallop:binding.rmi registryName="role-score-admin-service-rmi" serviceName="RoleRMIService"/>
+        </reference>
+    </component>
+ <component name = "ManagerServiceComponent">
+    	<implementation.java class = "com.ptteng.sca.score.admin.client.ManagerSCAClient"/>
+
+    	<reference name = "managerService">
+    		<scallop:binding.rmi registryName = "manager-score-admin-service-rmi" serviceName="ManagerRMIService"/>
+    	</reference>
+    </component >
+    <component name="ModuleServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.ModuleSCAClient"/>
+
+        <reference name="moduleService">
+            <scallop:binding.rmi registryName="module-score-admin-service-rmi" serviceName="ModuleRMIService"/>
+        </reference>
+    </component>
+    <component name="RoleModuleServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.RoleModuleSCAClient"/>
+
+        <reference name="roleModuleService">
+            <scallop:binding.rmi registryName="roleModule-score-admin-service-rmi" serviceName="RoleModuleRMIService"/>
+        </reference>
+    </component>
+    <component name="DailyAttendanceServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.DailyAttendanceSCAClient"/>
+
+        <reference name="dailyAttendanceService">
+            <scallop:binding.rmi registryName="dailyAttendance-score-admin-service-rmi"
+                                 serviceName="DailyAttendanceRMIService"/>
+        </reference>
+    </component>
+    <component name="EnterpriseApprovalServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.EnterpriseApprovalSCAClient"/>
+
+        <reference name="enterpriseApprovalService">
+            <scallop:binding.rmi registryName="enterpriseApproval-score-admin-service-rmi"
+                                 serviceName="EnterpriseApprovalRMIService"/>
+        </reference>
+    </component>
+    <component name="EnterpriseLogServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.EnterpriseLogSCAClient"/>
+
+        <reference name="enterpriseLogService">
+            <scallop:binding.rmi registryName="enterpriseLog-score-admin-service-rmi"
+                                 serviceName="EnterpriseLogRMIService"/>
+        </reference>
+    </component>
+    <component name="ScoreExchangeApprovalServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.ScoreExchangeApprovalSCAClient"/>
+
+        <reference name="scoreExchangeApprovalService">
+            <scallop:binding.rmi registryName="scoreExchangeApproval-score-admin-service-rmi"
+                                 serviceName="ScoreExchangeApprovalRMIService"/>
+        </reference>
+    </component>
+    <component name="ScoreLogServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.ScoreLogSCAClient"/>
+
+        <reference name="scoreLogService">
+            <scallop:binding.rmi registryName="scoreLog-score-admin-service-rmi" serviceName="ScoreLogRMIService"/>
+        </reference>
+    </component>
+    <component name="RewardLogServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.RewardLogSCAClient"/>
+
+        <reference name="rewardLogService">
+            <scallop:binding.rmi registryName="rewardLog-score-admin-service-rmi" serviceName="RewardLogRMIService"/>
+        </reference>
+    </component>
+    <component name="OperationLogServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.OperationLogSCAClient"/>
+
+        <reference name="operationLogService">
+            <scallop:binding.rmi registryName="operationLog-score-admin-service-rmi"
+                                 serviceName="OperationLogRMIService"/>
+        </reference>
+    </component>
+    <component name="AttendanceLogServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.AttendanceLogSCAClient"/>
+
+        <reference name="attendanceLogService">
+            <scallop:binding.rmi registryName="attendanceLog-score-admin-service-rmi"
+                                 serviceName="AttendanceLogRMIService"/>
+        </reference>
+    </component>
+    <component name="ApproveLogServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.ApproveLogSCAClient"/>
+
+        <reference name="approveLogService">
+            <scallop:binding.rmi registryName="approveLog-score-admin-service-rmi" serviceName="ApproveLogRMIService"/>
+        </reference>
+    </component>
+    <component name="StaffTaskRelationServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.StaffTaskRelationSCAClient"/>
+
+        <reference name="staffTaskRelationService">
+            <scallop:binding.rmi registryName="staffTaskRelation-score-admin-service-rmi"
+                                 serviceName="StaffTaskRelationRMIService"/>
+        </reference>
+    </component>
+    <component name="CopyRelationServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.CopyRelationSCAClient"/>
+
+        <reference name="copyRelationService">
+            <scallop:binding.rmi registryName="copyRelation-score-admin-service-rmi"
+                                 serviceName="CopyRelationRMIService"/>
+        </reference>
+    </component>
+    <component name="ApplyManageServiceComponent">
+        <implementation.java class="com.ptteng.sca.score.admin.client.ApplyManageSCAClient"/>
+
+        <reference name="applyManageService">
+            <scallop:binding.rmi registryName="applyManage-score-admin-service-rmi"
+                                 serviceName="ApplyManageRMIService"/>
+        </reference>
+    </component>
+
+
+</composite>
+

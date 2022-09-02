@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ptteng.dao.StudentDao">
+
+    <resultMap id="StudentMap" type="com.ptteng.model.Student">
+        <id property="id" column="id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+        <result property="name" column="name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="type" column="type" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="avatar" column="avatar" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="introduction" column="introduction" javaType="java.lang.String" jdbcType="VARCHAR"/>
+    </resultMap>
+
+
+    <select id="getAll" resultMap="StudentMap">
+        SELECT * FROM stu
+    </select>
+
+    <!--<insert id="add"  parameterType="com.ptteng.model.Student">-->
+
+            <!--INSERT INTO stu (name,type,avatar,introduction)VALUES (#{name},#{type},#{introducer},#{avatar})-->
+    <!--</insert>-->
+
+    <!--<delete id="delete" parameterType="int" >-->
+        <!--DELETE FROM stu WHERE id = #{id}-->
+    <!--</delete>-->
+    <!--&lt;!&ndash;SELECT * FROM ENTITY_RELATION WHERE SRC_ID=#{srcId}&ndash;&gt;-->
+    <!--&lt;!&ndash; parameterType输入参数的数据类型&ndash;&gt;-->
+    <!--<update id="update" parameterType="com.ptteng.model.Student">-->
+
+        <!--UPDATE stu SET  name = #{name},avatar = #{avatar},introduction = #{introducer} WHERE id = #{id}-->
+    <!--</update>-->
+
+    <!--<select id="findStudentById" parameterType="int" resultType="com.ptteng.model.Student">-->
+        <!--SELECT * FROM stu WHERE id =#{id}-->
+
+    <!--</select>-->
+
+    <!--resultMap:适合使用返回值是自定义实体类的情况  -->
+    <!--resultType适合使用返回值的数据类型是非自定义的，即jdk的提供的类型 -->
+
+
+</mapper>

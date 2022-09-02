@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ptteng.login.dao.excellence_stuDao">
+    <select id="getAll" resultType="com.ptteng.login.model.excellence_stu">
+        SELECT * FROM excellence_stu
+    </select>
+
+    <select id="getTime" parameterType="int" resultType="com.ptteng.login.model.excellence_stu">
+        SELECT * FROM excellence_stu WHERE id =#{id}
+    </select>
+</mapper>

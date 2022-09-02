@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite xmlns="http://www.osoa.org/xmlns/sca/1.0" xmlns:tuscany="http://tuscany.apache.org/xmlns/sca/1.0"
+    xmlns:scallop="http://scallop/xmlns/sca/1.0"
+    targetNamespace="http://ScoreAdminComponent" xmlns:sample="http://ScoreAdminComponent" name="ScoreAdminComponent">
+
+
+  <component name="ScoreAdminComponent">
+    <implementation.spring location="META-INF/score-home-service/applicationContext-server.xml" />
+  </component>
+  
+	  <service name="articleService" promote="ScoreAdminComponent/articleService">
+    <interface.java interface="com.ptteng.score.home.service.ArticleService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="ArticleRMIService"/>
+  </service>
+	  <service name="staffService" promote="ScoreAdminComponent/staffService">
+    <interface.java interface="com.ptteng.score.home.service.StaffService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="StaffRMIService"/>
+  </service>
+	  <service name="allTypeScoreService" promote="ScoreAdminComponent/allTypeScoreService">
+    <interface.java interface="com.ptteng.score.home.service.AllTypeScoreService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="AllTypeScoreRMIService"/>
+  </service>
+	  <service name="departmentService" promote="ScoreAdminComponent/departmentService">
+    <interface.java interface="com.ptteng.score.home.service.DepartmentService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="DepartmentRMIService"/>
+  </service>
+	  <service name="taskService" promote="ScoreAdminComponent/taskService">
+    <interface.java interface="com.ptteng.score.home.service.TaskService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="TaskRMIService"/>
+  </service>
+	  <service name="scoreTypeService" promote="ScoreAdminComponent/scoreTypeService">
+    <interface.java interface="com.ptteng.score.home.service.ScoreTypeService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="ScoreTypeRMIService"/>
+  </service>
+	  <service name="philosophyService" promote="ScoreAdminComponent/philosophyService">
+    <interface.java interface="com.ptteng.score.home.service.PhilosophyService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="PhilosophyRMIService"/>
+  </service>
+	  <service name="staffPhilosophyRelationService" promote="ScoreAdminComponent/staffPhilosophyRelationService">
+    <interface.java interface="com.ptteng.score.home.service.StaffPhilosophyRelationService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="StaffPhilosophyRelationRMIService"/>
+  </service>
+	  <service name="noticeService" promote="ScoreAdminComponent/noticeService">
+    <interface.java interface="com.ptteng.score.home.service.NoticeService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="NoticeRMIService"/>
+  </service>
+	  <service name="goodsService" promote="ScoreAdminComponent/goodsService">
+    <interface.java interface="com.ptteng.score.home.service.GoodsService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="GoodsRMIService"/>
+  </service>
+	  <service name="starService" promote="ScoreAdminComponent/starService">
+    <interface.java interface="com.ptteng.score.home.service.StarService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="StarRMIService"/>
+  </service>
+	  <service name="roleService" promote="ScoreAdminComponent/roleService">
+    <interface.java interface="com.ptteng.score.home.service.RoleService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="RoleRMIService"/>
+  </service>
+	  <service name="managerService" promote="ScoreAdminComponent/managerService">
+    <interface.java interface="com.ptteng.score.home.service.ManagerService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="ManagerRMIService"/>
+  </service>
+	  <service name="moduleService" promote="ScoreAdminComponent/moduleService">
+    <interface.java interface="com.ptteng.score.home.service.ModuleService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="ModuleRMIService"/>
+  </service>
+	  <service name="roleModuleService" promote="ScoreAdminComponent/roleModuleService">
+    <interface.java interface="com.ptteng.score.home.service.RoleModuleService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="RoleModuleRMIService"/>
+  </service>
+	  <service name="dailyAttendanceService" promote="ScoreAdminComponent/dailyAttendanceService">
+    <interface.java interface="com.ptteng.score.home.service.DailyAttendanceService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="DailyAttendanceRMIService"/>
+  </service>
+	  <service name="enterpriseApprovalService" promote="ScoreAdminComponent/enterpriseApprovalService">
+    <interface.java interface="com.ptteng.score.home.service.EnterpriseApprovalService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="EnterpriseApprovalRMIService"/>
+  </service>
+	  <service name="enterpriseLogService" promote="ScoreAdminComponent/enterpriseLogService">
+    <interface.java interface="com.ptteng.score.home.service.EnterpriseLogService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="EnterpriseLogRMIService"/>
+  </service>
+	  <service name="scoreExchangeApprovalService" promote="ScoreAdminComponent/scoreExchangeApprovalService">
+    <interface.java interface="com.ptteng.score.home.service.ScoreExchangeApprovalService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="ScoreExchangeApprovalRMIService"/>
+  </service>
+	  <service name="scoreLogService" promote="ScoreAdminComponent/scoreLogService">
+    <interface.java interface="com.ptteng.score.home.service.ScoreLogService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="ScoreLogRMIService"/>
+  </service>
+	  <service name="rewardLogService" promote="ScoreAdminComponent/rewardLogService">
+    <interface.java interface="com.ptteng.score.home.service.RewardLogService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="RewardLogRMIService"/>
+  </service>
+	  <service name="operationLogService" promote="ScoreAdminComponent/operationLogService">
+    <interface.java interface="com.ptteng.score.home.service.OperationLogService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="OperationLogRMIService"/>
+  </service>
+	  <service name="attendanceLogService" promote="ScoreAdminComponent/attendanceLogService">
+    <interface.java interface="com.ptteng.score.home.service.AttendanceLogService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="AttendanceLogRMIService"/>
+  </service>
+	  <service name="approveLogService" promote="ScoreAdminComponent/approveLogService">
+    <interface.java interface="com.ptteng.score.home.service.ApproveLogService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="ApproveLogRMIService"/>
+  </service>
+	  <service name="staffTaskRelationService" promote="ScoreAdminComponent/staffTaskRelationService">
+    <interface.java interface="com.ptteng.score.home.service.StaffTaskRelationService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="StaffTaskRelationRMIService"/>
+  </service>
+	  <service name="copyRelationService" promote="ScoreAdminComponent/copyRelationService">
+    <interface.java interface="com.ptteng.score.home.service.CopyRelationService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="CopyRelationRMIService"/>
+  </service>
+	  <service name="applyManageService" promote="ScoreAdminComponent/applyManageService">
+    <interface.java interface="com.ptteng.score.home.service.ApplyManageService"/>
+    <scallop:binding.rmi host="localhost" port="10951" serviceName="ApplyManageRMIService"/>
+  </service>
+	
+	
+	 
+  
+	
+
+
+</composite>
+

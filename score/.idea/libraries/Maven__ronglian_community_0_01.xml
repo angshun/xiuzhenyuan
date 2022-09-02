@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: ronglian:community:0.01">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/ronglian/community/0.01/community-0.01.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/ronglian/community/0.01/community-0.01-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/ronglian/community/0.01/community-0.01-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

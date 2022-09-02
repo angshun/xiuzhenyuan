@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Task08.iml" filepath="$PROJECT_DIR$/Task08.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Task08-Core/Task08-Core.iml" filepath="$PROJECT_DIR$/Task08-Core/Task08-Core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Task08-Service/Task08-Service.iml" filepath="$PROJECT_DIR$/Task08-Service/Task08-Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Task08-Service2/Task08-Service2.iml" filepath="$PROJECT_DIR$/Task08-Service2/Task08-Service2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Task08-Web/Task08-Web.iml" filepath="$PROJECT_DIR$/Task08-Web/Task08-Web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Task08-Web2/Task08-Web2.iml" filepath="$PROJECT_DIR$/Task08-Web2/Task08-Web2.iml" />
+    </modules>
+  </component>
+</project>

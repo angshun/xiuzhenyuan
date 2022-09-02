@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite xmlns="http://www.osoa.org/xmlns/sca/1.0" xmlns:tuscany="http://tuscany.apache.org/xmlns/sca/1.0" xmlns:scallop="http://scallop/xmlns/sca/1.0"
+           targetNamespace="http://sns.sohu.com/home/composite" xmlns:sample="http://sns.sohu.com/home/composite" name="HomeComposite">
+	
+
+
+
+
+    	
+	
+	 <!-- CarrotsBangbangComponent -->
+	 
+	     <component name = "ArticleServiceComponent">
+    	<implementation.java class = "com.ptteng.sca.carrots.bangbang.client.ArticleSCAClient"/>
+    	   
+    	<reference name = "articleService">
+    		<scallop:binding.rmi registryName = "article-carrots-bangbang-home-service-rmi" serviceName="ArticleRMIService"/>
+    	</reference>
+    </component >
+        <component name = "ProductServiceComponent">
+    	<implementation.java class = "com.ptteng.sca.carrots.bangbang.client.ProductSCAClient"/>
+    	   
+    	<reference name = "productService">
+    		<scallop:binding.rmi registryName = "product-carrots-bangbang-home-service-rmi" serviceName="ProductRMIService"/>
+    	</reference>
+    </component >
+        <component name = "CompanyServiceComponent">
+    	<implementation.java class = "com.ptteng.sca.carrots.bangbang.client.CompanySCAClient"/>
+    	   
+    	<reference name = "companyService">
+    		<scallop:binding.rmi registryName = "company-carrots-bangbang-home-service-rmi" serviceName="CompanyRMIService"/>
+    	</reference>
+    </component >
+        <component name = "ProfessionServiceComponent">
+    	<implementation.java class = "com.ptteng.sca.carrots.bangbang.client.ProfessionSCAClient"/>
+    	   
+    	<reference name = "professionService">
+    		<scallop:binding.rmi registryName = "profession-carrots-bangbang-home-service-rmi" serviceName="ProfessionRMIService"/>
+    	</reference>
+    </component >
+        <component name = "CompanyTagServiceComponent">
+    	<implementation.java class = "com.ptteng.sca.carrots.bangbang.client.CompanyTagSCAClient"/>
+    	   
+    	<reference name = "companyTagService">
+    		<scallop:binding.rmi registryName = "companyTag-carrots-bangbang-home-service-rmi" serviceName="CompanyTagRMIService"/>
+    	</reference>
+    </component >
+        <component name = "ProfessionTagServiceComponent">
+    	<implementation.java class = "com.ptteng.sca.carrots.bangbang.client.ProfessionTagSCAClient"/>
+    	   
+    	<reference name = "professionTagService">
+    		<scallop:binding.rmi registryName = "professionTag-carrots-bangbang-home-service-rmi" serviceName="ProfessionTagRMIService"/>
+    	</reference>
+    </component >
+    	
+	
+</composite>
+

@@ -1,0 +1,269 @@
+<!doctype html>
+<html manifest="a.appcache">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>HTML5的离线储存怎么使用？</title>
+
+    <link rel="stylesheet" href="../css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="../css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="../lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? '../css/reveal/print/pdf.css' : '../css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<img src="../img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h2>【css-12】HTML5的离线储存怎么使用？</h2>
+            <p>分享人：杨泽平</p>
+        </section>
+        <section>
+            <p>目录</p>
+            <div style="text-align: left ; padding:0 15% ;">
+
+                <p>1.HTML5的离线储存是个什么东东？</p>
+                <p>2.HTML5的离线储存如何使用？</p>
+                <p>3.使用HTML5的离线储存的相关注意事项</p>
+                <p>4.参考文献</p>
+                <p>5.拓展：浏览器与服务器是如何交互的！</p>
+            </div>
+        </section>
+        <section>
+            <section>
+                <h3>1.HTML5的离线储存是个什么东东？</h3>
+            </section>
+            <section>
+                <div style="text-align: left ; padding:0 5% ;">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTML5 提供一种 应用缓存 机制，使得基于web的应用程序可以离线运行。开发者可以使用 Application Cache (AppCache) 接口设定浏览器缓存的数据并使得数据离线有效。 在处于离线状态时，即使用户点击刷新按钮，应用也能正常加载与工作。</p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left ; padding: 5% ;">
+                    <p>应用程序缓存为应用带来三个优势：</p>
+                    <p>
+                        1. 离线浏览 - 用户可在应用离线时使用它们 <br>
+                        2. 更快的速度 - 因为数据被存储在本地，所以速度会更快。<br>
+                        3. 减少服务器负载 - 浏览器将只从服务器下载更新过或更改过的资源。
+                    </p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left ; padding: 5%">
+                    <p style="color:red">注意：</p>
+                    <p>
+                        该特性已经从 Web 标准中删除，虽然一些浏览器目前仍然支持它，但也许会在未来的某个时间停止支持，请尽量不要使用该特性。
+                    </p>
+                    <a style="color: #e77;" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Using_the_application_cache" target="_blank">点我查看详情</a>
+                </div>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>2.HTML5的离线储存如何使用？</h3>
+            </section>
+            <section>
+                <div style="text-align: left ; padding: 5%">
+                    <p>若想为网页开启应用缓存，你需要在应用页面中的 <html> 元素上增加 manifest 特性，请看下面的例子：</p>
+                </div>
+                <img src="../img/css-task12 how to use application cache/1.jpg" alt="">
+            </section>
+            <section>
+                <div style="text-align: left ; padding: 5%; font-size: 30px;">
+                    <p>
+                        manifest的特性与 缓存清单(cache manifest)文件相关联，这个文件包含了浏览器需要为你的应用缓存的资源(文件)列表。
+                    </p>
+                    <p>你说的我都懂，那么什么是缓存清单(cache manifest)？</p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left ; padding: 5%; font-size: 30px;">
+                    <p>
+                        缓存清单文件是一个纯文本文件，它列出了所有浏览器应该缓存起来的资源，以便能够离线访问。资源使用                            URI 来标识。在缓存清单文件中列出的所有记录必须拥有相同的协议、主机名与端口号。
+                    </p>
+                    <p>举个栗子：</p>
+                    <pre>
+                        <code>
+                            CACHE MANIFEST
+                            # v1 2011-08-14
+                            # This is another comment
+                            index.html
+                            cache.html
+                            style.css
+                            image1.png
+
+                            # Use from network if available
+                            NETWORK:
+                            network.html
+
+                            # Fallback content
+                            FALLBACK:
+                            / fallback.html
+                        </code>
+                    </pre>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left ; padding: 5%; font-size: 30px;">
+                    <p>CACHE MANIFEST - 在此标题下列出的文件将在首次下载后进行缓存</p>
+                    <p>NETWORK - 在此标题下列出的文件需要与服务器的连接，且不会被缓存</p>
+                    <p>FALLBACK - 在此标题下列出的文件规定当页面无法访问时的回退页面（比如 404 页面）</p>
+                </div>
+            </section>
+            <section>
+                <img src="../img/css-task12 how to use application cache/2.jpg" alt="">
+                <p>图为w3c网站的一个缓存文件目录</p>
+
+            </section>
+            <section>
+                <img src="../img/css-task12 how to use application cache/3.jpg" alt="">
+                <p>图为w3c网站的一个缓存文件中MANIFEST中的内容</p>
+            </section>
+            <section>
+                <p>清楚缓存的几个方法</p>
+                <div style="text-align: left ; padding: 0 5%; font-size: 30px;">
+                    <div style="text-align: left ; padding: 5%; font-size: 30px;">
+                        <p>在 Chrome 中，你可以在设置中选择 「清除浏览器数据...」 或访问 chrome://appcache-internals/ 来清除缓存。Safari 在设置中有一个类似的"清空缓存" 选项，但是需要重启浏览器后才能生效。</p>
+                        <p>在 Firefox 中可以通过访问 about:cache 页面(在「离线缓存设置」标题下)来检查离线缓存的当前状况。 若想单独清除每个网站的离线缓存，可以使用 工具 -> 选项 -> 高级 -> 网络 -> 离线数据中的「删除」按钮。</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>
+                    3.离线储存和浏览器缓存之间的区别。
+                </h3>
+            </section>
+            <section>
+                <div style="text-align: left ; padding: 0 5%">
+                    <p> 1、浏览器缓存主要包含两类</p>
+                    <p>  a.缓存协商：Last-modified,Etag</p>
+                    <p>浏览器向服务器询问页面是否被修改过，如果没有修改就返回304，浏览器直接浏览本地缓存文件。否则服务器返回新内容。</p>
+                    <p>b.彻底缓存：cache-control,Expires</p>
+                    <p> 通过Expires设置缓存失效时间，在失效之前不需要再跟服务器请求交互。</p>
+                </div>
+
+            </section>
+            <section>
+                <div style="text-align: left ; padding: 0 5%">
+                    <p> 2、离线存储为整个web提供服务，浏览器缓存只缓存单个页面；</p>
+                    <p> 3、离线存储可以指定需要缓存的文件和哪些文件只能在线浏览，浏览器缓存无法指定；</p>
+                    <p> 4、离线存储可以动态通知用户进行更新。</p>
+                </div>
+            </section>
+            <section>
+                <p>浏览器兼容性</p>
+                <img src="../img/css-task12 how to use application cache/5.jpg" alt="">
+
+            </section>
+        </section>
+        <section>
+            <h3>4.参考文献</h3>
+            <div style="text-align: left; padding: 0 5%">
+                <p> pureboys的博客:</p>
+                <a style="color:#ccc" href="https://my.oschina.net/pureboys/blog/159787" target="_blank">https://my.oschina.net/pureboys/blog/159787</a>
+                <p>MDN离线存储相关文档</p>
+                <a style="color:#ccc" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Using_the_application_cache">https://developer.mozilla.org/zh-CN/docs/Web/HTML/Using_the_application_cache</a>
+            </div>
+
+        </section>
+        <section>
+            <section>
+                <h3>5.拓展</h3>
+            </section>
+            <section>
+                <p>浏览器与服务器是如何交互的</p>
+                <div style="text-align: left; padding: 0 5%" >
+                    <p> 曾经有面试题是这样的："描述在浏览器的地址栏中输入:http://www.baidu.com 后发生了什么？"。</p>
+                    <p>  1、服务端返回baidu页面资源，浏览器载入html</p>
+                    <p>  2、浏览器开始解析</p>
+                    <p>  3、发现link，发送请求载入css文件</p>
+                    <p>  4、浏览器渲染页面</p>
+                    <p>  5、发现图片，发送请求载入图片，并重新渲染</p>
+                    <p>  6、发送请求js文件，阻塞渲染。如果js对dom进行了操作，则会进行rerender</p>
+                </div>
+            </section>
+            <section>
+                <p>   对于支持离线存储的页面</p>
+
+                <div style="text-align: left; padding: 0 5%" >
+                    <p style="color: orange;">首次载入页面：</p>
+                    <p>1-6 ： 同上</p>
+                    <p> 7：请求页面中需要缓存的页面和数据</p>
+                    <p>8：服务器返回所有请求文件，浏览器进行本地存储</p>
+                </div>
+            </section>
+            <section>
+
+                <div style="text-align: left; padding: 0 5%" >
+                    <p style="color: orange;"> 再次载入页面</p>
+                    <p>1：发送请求</p>
+                    <p>2：使用本地存储的离线文件</p>
+                    <p>3：解析页面</p>
+                    <p>4：请求服务端的manifest文件，判断是否有改变,如果改变，执行下一步。否则使用本地存储，不重新请求</p>
+                    <p>5：进入首次载入页面的7-8</p>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <h4>鸣谢</h4>
+            <p>感谢大家观看</p>
+            <p><small>BY :<br> 北京-杨兴强 <br>武汉-杨泽平</small></p>
+        </section>
+
+    </div>
+</div>
+
+<script src="../lib/reveal/js/head.min.js"></script>
+<script src="../lib/reveal/reveal.js"></script>
+
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    // 	controls: true, // 是否在右下角展示控制条
+    // 	progress: true, // 是否显示演示的进度条
+    // 	slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    // 	history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    // 	keyboard: true, // 是否启用键盘快捷键来导航
+    // 	overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    // 	center: true, // 是否将幻灯片垂直居中
+    // 	touch: true, // 是否在触屏设备上启用触摸滑动切换
+    // 	loop: false, // 是否循环演示
+    // 	rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    // 	fragments: true, // 全局开启和关闭碎片。
+    // 	autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    // 	transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    // 	transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    // 	mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: '../plugin/markdown/marked.js' },
+            { src: '../plugin/markdown/markdown.js' },
+            { src: '../plugin/notes/notes.js', async: true },
+            { src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>

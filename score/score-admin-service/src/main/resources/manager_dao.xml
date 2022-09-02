@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dal>
+	<route>
+		<object name="com.ptteng.score.admin.model.Manager"
+			listenerClass="" strategyProperty="">
+
+
+			<list name="getManagerIdsByRoleID"
+				  sqlitem="select id from manager where role_id = ?"
+				  keyProperty="rid" valueProperty="id" keyColumn="rid" />
+
+			<list name="getManagerIdsByRoleIDAndStatus"
+				  sqlitem="select id from manager where role_id = ? and status = ?"
+				  keyProperty="rid,status" valueProperty="id" keyColumn="rid,status" />
+
+
+
+
+
+
+
+
+			<list name="getManagerIdsAll" sqlitem="select id from manager where 1 = 1 order by create_at desc"
+				keyProperty="version" valueProperty="id" keyColumn="version" />
+			
+			<dbStrategy name="mutiDS"
+                clasz="com.gemantic.dal.route.strategy.DefaultStrategy">  <pattern value="[0-9]$" group="score" />
+            </dbStrategy>
+			
+		</object>
+	</route>
+</dal>

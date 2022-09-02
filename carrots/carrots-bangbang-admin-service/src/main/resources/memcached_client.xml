@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+	<cache>
+		<datasource
+			name="default"
+			timeout="300"
+			port="11211"
+			server="cache.carrots.bangbang"
+			maxActive="18" 
+			maxIdle="18" 
+			maxWait="-1" 
+		/>
+	</cache>
+	<!--<regions>-->
+		<!---->
+						<!--<region name="com.ptteng.carrots.bangbang.model.Role" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.carrots.bangbang.model.Manager" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.carrots.bangbang.model.Module" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ptteng.carrots.bangbang.model.RoleModule" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.Article" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.Product" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.Company" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.Profession" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.CompanyTag" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+						<!--<region name="com.ProfessionTag" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">-->
+			<!--<keyPattern value="[0-9]$" datasource ="default"/>-->
+		<!--</region>-->
+		<!---->
+
+	<!--</regions>-->
+</root>
+

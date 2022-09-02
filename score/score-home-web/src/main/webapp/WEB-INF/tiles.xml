@@ -1,0 +1,138 @@
+
+		<!---->
+						<!--<definition name="/score-home-service/article/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/staff/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/allTypeScore/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/department/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/task/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/scoreType/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/philosophy/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/staffPhilosophyRelation/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/notice/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/goods/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/star/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/role/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/manager/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/module/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/roleModule/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/dailyAttendance/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/enterpriseApproval/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/enterpriseLog/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/scoreExchangeApproval/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/scoreLog/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/rewardLog/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/operationLog/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/attendanceLog/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/approveLog/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/staffTaskRelation/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/copyRelation/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+						<!--<definition name="/score-home-service/applyManage/view/*" extends="root">-->
+		    <!--<put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />-->
+		      <!--<put-attribute name="title" value="地址" type="string" />-->
+	        <!--</definition>-->
+	<!---->
+					

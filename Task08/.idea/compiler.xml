@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Task08-Core" />
+        <module name="Task08-Service" />
+        <module name="Task08-Service2" />
+        <module name="Task08-Web" />
+        <module name="Task08-Web2" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="sdfsfsfsd" target="1.8" />
+      <module name="Task08" target="1.8" />
+      <module name="Task08-Core" target="1.8" />
+      <module name="Task08-Service" target="1.8" />
+      <module name="Task08-Service2" target="1.6" />
+      <module name="Task08-Web" target="1.8" />
+      <module name="Task08-Web2" target="1.8" />
+      <module name="Task089" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

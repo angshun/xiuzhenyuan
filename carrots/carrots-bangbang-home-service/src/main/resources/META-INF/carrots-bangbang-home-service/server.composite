@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite xmlns="http://www.osoa.org/xmlns/sca/1.0" xmlns:tuscany="http://tuscany.apache.org/xmlns/sca/1.0"
+    xmlns:scallop="http://scallop/xmlns/sca/1.0"
+    targetNamespace="http://CarrotsBangbangComponent" xmlns:sample="http://CarrotsBangbangComponent" name="CarrotsBangbangComponent">
+
+
+  <component name="CarrotsBangbangComponent">
+    <implementation.spring location="META-INF/carrots-bangbang-home-service/applicationContext-server.xml" />
+  </component>
+  
+	  <service name="articleService" promote="CarrotsBangbangComponent/articleService">
+    <interface.java interface="com.ptteng.carrots.bangbang.service.ArticleService"/> 
+    <scallop:binding.rmi host="localhost" port="20026" serviceName="ArticleRMIService"/>     
+  </service>
+	  <service name="productService" promote="CarrotsBangbangComponent/productService">
+    <interface.java interface="com.ptteng.carrots.bangbang.service.ProductService"/> 
+    <scallop:binding.rmi host="localhost" port="20026" serviceName="ProductRMIService"/>     
+  </service>
+	  <service name="companyService" promote="CarrotsBangbangComponent/companyService">
+    <interface.java interface="com.ptteng.carrots.bangbang.service.CompanyService"/> 
+    <scallop:binding.rmi host="localhost" port="20026" serviceName="CompanyRMIService"/>     
+  </service>
+	  <service name="professionService" promote="CarrotsBangbangComponent/professionService">
+    <interface.java interface="com.ptteng.carrots.bangbang.service.ProfessionService"/> 
+    <scallop:binding.rmi host="localhost" port="20026" serviceName="ProfessionRMIService"/>     
+  </service>
+	  <service name="companyTagService" promote="CarrotsBangbangComponent/companyTagService">
+    <interface.java interface="com.ptteng.carrots.bangbang.service.CompanyTagService"/> 
+    <scallop:binding.rmi host="localhost" port="20026" serviceName="CompanyTagRMIService"/>     
+  </service>
+	  <service name="professionTagService" promote="CarrotsBangbangComponent/professionTagService">
+    <interface.java interface="com.ptteng.carrots.bangbang.service.ProfessionTagService"/> 
+    <scallop:binding.rmi host="localhost" port="20026" serviceName="ProfessionTagRMIService"/>     
+  </service>
+	
+	
+	 
+  
+	
+
+
+</composite>
+

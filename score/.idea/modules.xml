@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/score.iml" filepath="$PROJECT_DIR$/score.iml" />
+      <module fileurl="file://$PROJECT_DIR$/score-admin-core/score-admin-core.iml" filepath="$PROJECT_DIR$/score-admin-core/score-admin-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/score-admin-service/score-admin-service.iml" filepath="$PROJECT_DIR$/score-admin-service/score-admin-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/score-admin-web/score-admin-web.iml" filepath="$PROJECT_DIR$/score-admin-web/score-admin-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/score-home-core/score-home-core.iml" filepath="$PROJECT_DIR$/score-home-core/score-home-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/score-home-service/score-home-service.iml" filepath="$PROJECT_DIR$/score-home-service/score-home-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/score-home-web/score-home-web.iml" filepath="$PROJECT_DIR$/score-home-web/score-home-web.iml" />
+    </modules>
+  </component>
+</project>

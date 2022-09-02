@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context-4.0.xsd
+         http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+
+    <!--spring,mybatis,springMybatis,springMVC全部整合到一个配置文件里-->
+
+    <!--1.配置数据库连接-->
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+    <!--2.配置SqlSessionFactory对象,加载mapper文件-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="mapperLocations" value="classpath:StudentMapper.xml"/>
+    </bean>
+    <!--3.扫描指定的包下的所有接口类并转化Bean-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.ptteng.dao"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+    </bean>
+
+    <!--4.扫描所有注解，并自动创建bean-->
+    <context:component-scan base-package="com.ptteng"/>
+    <!--5.springRmi-->
+
+    <!--服务端-->
+    <bean id="studentServiceExporter" class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <!--serviceName-->
+        <property name="serviceName" value="SService"/>
+        <!--service实现类-->
+        <property name="service" ref="studentService"/>
+        <!--service接口-->
+        <property name="serviceInterface" value="com.ptteng.service.StudentService"/>
+        <!--注册端口号-->
+        <property name="registryPort" value="8010"/>
+        <!--给服务注册端口号-->
+        <property name="servicePort" value="8020"/>
+    </bean>
+
+    <bean id="studentService" class="com.ptteng.service.impl.StudentServiceImpl"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</beans>
